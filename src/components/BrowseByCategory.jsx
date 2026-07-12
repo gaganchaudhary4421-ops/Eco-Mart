@@ -47,6 +47,7 @@ export default function BrowseByCategory() {
                 width: "140px",
                 height: "100px",
                 display: "flex",
+
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
