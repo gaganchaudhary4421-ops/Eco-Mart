@@ -233,7 +233,7 @@ export default function FlashSales() {
   };
 
   return (
-    <section style={{ padding: "50px 0 10px" }}>
+    <section style={{ padding: "10px 0 10px" }}>
       <div className="container">
         <div className="section-label">
           <span></span>
