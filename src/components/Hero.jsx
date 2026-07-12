@@ -1,30 +1,30 @@
 import React from "react";
 import iphone from "../assets/images/Iphone_14_Pro.jpg";
 
-export default function Hero() {
-  const categories = [
-    "Woman's Fashion",
-    "Men's Fashion",
-    "Electronics",
-    "Home & Lifestyle",
-    "Medicine",
-    "Sports & Outdoor",
-    "Baby's & Toys",
-    "Groceries & Pets",
-    "Health & Beauty",
-  ];
+const categories = [
+  "Woman's Fashion",
+  "Men's Fashion",
+  "Electronics",
+  "Home & Lifestyle",
+  "Medicine",
+  "Sports & Outdoor",
+  "Baby's & Toys",
+  "Groceries & Pets",
+  "Health & Beauty",
+];
 
+export default function Hero() {
   return (
     <section style={{ borderBottom: "1px solid #eee" }}>
-      <div className="container-fluid px-0">
-        <div className="d-flex" style={{ minHeight: "340px" }}>
+      <div className="container">
+        <div className="d-flex" style={{ gap: "24px", padding: "24px 0" }}>
           {/* Sidebar */}
           <div
             style={{
-              width: "350px",
-              minWidth: "350px",
+              width: "200px",
+              minWidth: "200px",
               borderRight: "1px solid #eee",
-              padding: "8px 0",
+              paddingRight: "16px",
             }}
           >
             {categories.map((cat, i) => (
@@ -32,7 +32,7 @@ export default function Hero() {
                 key={i}
                 className="d-flex justify-content-between align-items-center"
                 style={{
-                  padding: "10px 20px",
+                  padding: "10px 0",
                   cursor: "pointer",
                   fontSize: "14px",
                 }}
@@ -53,10 +53,12 @@ export default function Hero() {
             style={{
               flex: 1,
               background: "#000",
+              borderRadius: "4px",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              padding: "40px 80px",
+              padding: "40px 40px 40px 60px",
+              minHeight: "340px",
             }}
           >
             <div style={{ color: "#fff" }}>
@@ -106,9 +108,30 @@ export default function Hero() {
             <img
               src={iphone}
               alt="iPhone 14 Pro"
-              style={{ height: "300px", objectFit: "contain" }}
+              style={{
+                height: "280px",
+                objectFit: "contain",
+                marginRight: "20px",
+              }}
             />
           </div>
+        </div>
+
+        {/* Dots */}
+        <div style={{ textAlign: "center", paddingBottom: "16px" }}>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <span
+              key={i}
+              style={{
+                display: "inline-block",
+                width: i === 2 ? "20px" : "8px",
+                height: "8px",
+                borderRadius: "4px",
+                background: i === 2 ? "#DB4444" : "#ccc",
+                margin: "0 4px",
+              }}
+            ></span>
+          ))}
         </div>
       </div>
     </section>
