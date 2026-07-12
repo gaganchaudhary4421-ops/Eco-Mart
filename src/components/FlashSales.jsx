@@ -233,7 +233,7 @@ export default function FlashSales() {
   };
 
   return (
-    <section style={{ padding: "60px 0 40px" }}>
+    <section style={{ padding: "50px 0 10px" }}>
       <div className="container">
         <div className="section-label">
           <span></span>
@@ -287,6 +287,7 @@ export default function FlashSales() {
 
         <div
           ref={scrollRef}
+          className="flash-scroll"
           style={{
             display: "flex",
             gap: "16px",
@@ -296,9 +297,14 @@ export default function FlashSales() {
             msOverflowStyle: "none",
           }}
         >
-          <style>{`.flash-scroll::-webkit-scrollbar { display: none; }`}</style>
           {products.map((p) => (
-            <div key={p.id} style={{ minWidth: "220px", flex: "0 0 220px" }}>
+            <div
+              key={p.id}
+              style={{
+                minWidth: "calc(25% - 12px)",
+                flex: "0 0 calc(25% - 12px)",
+              }}
+            >
               <ProductCard product={p} />
             </div>
           ))}
