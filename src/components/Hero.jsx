@@ -18,8 +18,9 @@ export default function Hero() {
     <section style={{ borderBottom: "1px solid #eee" }}>
       <div className="container">
         <div className="d-flex" style={{ gap: "24px", padding: "24px 0" }}>
-          {/* Sidebar */}
+          {/* Sidebar - desktop only */}
           <div
+            className="d-none d-lg-block"
             style={{
               width: "200px",
               minWidth: "200px",
@@ -54,14 +55,22 @@ export default function Hero() {
               flex: 1,
               background: "#000",
               borderRadius: "4px",
+              minHeight: "340px",
+              position: "relative",
+              overflow: "hidden",
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
-              padding: "40px 40px 40px 60px",
-              minHeight: "340px",
             }}
           >
-            <div style={{ color: "#fff" }}>
+            {/* Text */}
+            <div
+              style={{
+                color: "#fff",
+                padding: "40px",
+                zIndex: 1,
+                maxWidth: "55%",
+              }}
+            >
               <p
                 style={{
                   fontSize: "13px",
@@ -81,7 +90,7 @@ export default function Hero() {
               </p>
               <h2
                 style={{
-                  fontSize: "48px",
+                  fontSize: "clamp(24px, 4vw, 48px)",
                   fontWeight: "700",
                   lineHeight: "1.2",
                   marginBottom: "24px",
@@ -105,16 +114,60 @@ export default function Hero() {
                 Shop Now →
               </a>
             </div>
-            <img
-              src={iphone}
-              alt="iPhone 14 Pro"
+
+            {/* iPhone image always visible */}
+            <div
               style={{
-                height: "280px",
-                objectFit: "contain",
-                marginRight: "20px",
+                position: "absolute",
+                right: 0,
+                top: 0,
+                bottom: 0,
+                width: "45%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-            />
+            >
+              <img
+                src={iphone}
+                alt="iPhone 14 Pro"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  padding: "20px",
+                }}
+              />
+            </div>
           </div>
+        </div>
+
+        {/* Mobile category scroll */}
+        <div
+          className="d-lg-none"
+          style={{
+            display: "flex",
+            overflowX: "auto",
+            gap: "12px",
+            paddingBottom: "12px",
+            scrollbarWidth: "none",
+          }}
+        >
+          {categories.map((cat, i) => (
+            <div
+              key={i}
+              style={{
+                whiteSpace: "nowrap",
+                padding: "6px 14px",
+                border: "1px solid #eee",
+                borderRadius: "20px",
+                fontSize: "13px",
+                cursor: "pointer",
+              }}
+            >
+              {cat}
+            </div>
+          ))}
         </div>
 
         {/* Dots */}
