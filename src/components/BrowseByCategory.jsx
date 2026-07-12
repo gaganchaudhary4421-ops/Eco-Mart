@@ -38,7 +38,7 @@ export default function BrowseByCategory() {
           </div>
         </div>
 
-        <div className="d-flex gap-3 flex-wrap">
+        <div className="d-flex gap-3 flex-wrap justify-content-center">
           {categories.map((cat) => (
             <div
               key={cat.name}
