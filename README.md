@@ -73,7 +73,7 @@ src/
 
 ├── App.css
 
-└── index.js
+└── index.html
 
 ## Live Demo
 
