@@ -37,8 +37,6 @@ npm install
 npm start
 ```
 
-App runs at `http://localhost:5173`
-
 ## Folder Structure
 
 src/
@@ -79,7 +77,7 @@ src/
 
 ## Live Demo
 
-[Add deployment link here if hosted on Vercel/Netlify]
+https://eco-mart-hz5fmsepa-gaganchaudhary4421-ops-projects.vercel.app/
 
 ## Author
 
