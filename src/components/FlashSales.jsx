@@ -241,7 +241,7 @@ export default function FlashSales() {
         </div>
 
         <div className="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-          <div className="d-flex align-items-center gap-4 flex-wrap">
+          <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3">
             <h2 className="section-title mb-0">Flash Sales</h2>
             <div className="d-flex gap-3">
               {[
@@ -260,7 +260,7 @@ export default function FlashSales() {
                   >
                     {label}
                   </div>
-                  <div style={{ fontSize: "28px", fontWeight: "700" }}>
+                  <div style={{ fontSize: "22px", fontWeight: "700" }}>
                     {pad(val)}
                   </div>
                 </div>
@@ -284,7 +284,6 @@ export default function FlashSales() {
             </button>
           </div>
         </div>
-
         <div
           ref={scrollRef}
           className="flash-scroll"
