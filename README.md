@@ -1,7 +1,5 @@
 # Eco-Mart — E-Commerce Frontend
 
-A pixel-perfect, fully responsive e-commerce homepage built with React.js, Bootstrap 5, and CSS3.
-
 ## Tech Stack
 
 - React.js
@@ -78,3 +76,11 @@ src/
 ├── App.css
 
 └── index.js
+
+## Live Demo
+
+[Add deployment link here if hosted on Vercel/Netlify]
+
+## Author
+
+Gagan Chaudhary
