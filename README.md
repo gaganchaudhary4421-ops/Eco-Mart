@@ -77,7 +77,7 @@ src/
 
 ## Live Demo
 
-https://eco-mart-hz5fmsepa-gaganchaudhary4421-ops-projects.vercel.app/
+[https://github.com/gaganchaudhary4421-ops/Eco-Mart]
 
 ## Author
 
